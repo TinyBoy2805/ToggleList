@@ -1,0 +1,3409 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+
+html
+{
+    height: 100%;
+    width: 100%;
+}
+
+/* body */
+body
+{
+    background: linear-gradient(-135deg, rgb(60, 55, 106), rgb(23, 20, 69));
+}
+
+body::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: rgb(60, 55, 106);
+}
+
+body::-webkit-scrollbar-thumb
+{
+   background-image: linear-gradient( 45deg,#3494E6,#EC6EAD);
+   border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track
+{
+   background-color: rgb(60, 55, 106);
+   border-radius: 20px;
+}
+
+
+.navbar
+{
+
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #1E0342;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #6420AA;
+    box-shadow: 0 0 2px 2px rgb(230, 132, 255);
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.navbar a
+{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1;
+
+
+}
+
+.navbar .ani
+{
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    background-color: #bc64ff;
+    z-index: 0;
+    border-radius: 5px;
+    transform: translateY(-50px);
+    transition: all .3s ease 0s;
+}
+
+.navbar a:nth-child(1)
+{
+    width: 200px;
+}
+
+.navbar .start-switch,a:nth-child(1):hover ~ .ani
+{
+    width: 200px;
+    left: 0px;
+}
+
+
+.navbar a:nth-child(2)
+{
+    width: 150px;
+}
+
+.navbar .start-button,a:nth-child(2):hover ~ .ani
+{
+    width: 150px;
+    left: 200px;
+}
+.navbar a:nth-child(3)
+{
+    width: 135px;
+}
+
+.navbar .start-info,a:nth-child(3):hover ~ .ani
+{
+    width: 130px;
+    left: 366px;
+}
+
+
+
+
+
+
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+
+
+
+/* button1 */
+.container .button1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button1 #num1
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+
+.container .button1 #label
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    height: 60px;
+    background-color: rgba(0, 0, 29, 0.938);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    overflow: hidden;
+}
+
+.container .button1 #label::before
+{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(23, 23, 46, 0.938);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.75) inset;
+    transform: translateX(-33px);
+    position: absolute;
+    transition: 0.4s;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.container .button1 #label::after
+{
+    content: "OFF";
+    position: absolute;
+    font-size: 28px;
+    color: rgb(255, 255, 241);
+    font-weight: bold;
+    transform: translateX(27px);
+    transition: 0.4s;
+
+    
+}
+
+.container .button1 #check
+{
+    display: none;
+}
+
+.container .button1 #check:checked + #label::before
+{
+    transform: translateX(33px);
+    background-color: rgb(255, 255, 42);
+}
+
+.container .button1 #check:checked + #label::after
+{
+    transform: translateX(-27px);
+    content: "ON";
+}
+
+
+/* button2 */
+
+.container .button2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button2 #num2
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button2 #check2
+{
+    display: none;
+}
+
+.container .button2 #label2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    height: 60px;
+    background-color: rgba(241, 241, 241, 0.938);
+    border-radius: 50px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.container .button2 #label2::before
+{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.75);
+    transform: translateX(-33px);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.container .button2 #check2:checked + #label2::before
+{
+    transform: translateX(33px);
+}
+
+.container .button2 #check2:checked + #label2
+{
+    background-color: rgb(55, 255, 55);
+}
+
+/* button3 */
+
+.container .button3
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button3 #num3
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button3 #check3
+{
+    display: none;
+}
+
+
+.container .button3 #label3
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    height: 60px;
+    background-color: rgb(255, 254, 254);
+    border-radius: 50px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.container .button3 #label3::before
+{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #5BBCFF;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75);
+    transform: translateX(-33px);
+    transition: 0.3s;
+    z-index: 10px;
+    cursor: pointer;
+}
+
+.container .button3 #label3::after
+{
+    content: "OFF";
+    position: absolute;
+    font-size: 28px;
+    color: #5BBCFF;
+    font-weight: bold;
+    transform: translateX(27px);
+    transition: 0.3s;
+    
+}
+
+
+.container .button3 #check3:checked + #label3::before
+{
+    transform: translateX(33px);
+    box-shadow: 0 0 5px 2px rgba(224, 224, 224, 0.534);
+}
+
+.container .button3 #check3:checked + #label3::after
+{
+    content: "ON";
+    transform: translateX(-27px);
+    color: #fffafa;
+}
+
+.container .button3 #check3:checked + #label3
+{
+    background-color: #006cb9;
+}
+
+/* button4 */
+
+.container .button4
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+}
+.container .button4 #num4
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button4 #check4
+{
+    display: none;
+}
+
+
+.container .button4 #label4
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    height: 60px;
+    background-color: #ff547f;
+    border-radius: 50px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75) inset;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.container .button4 #label4::before
+{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #fffafa;
+    box-shadow: 0 0 5px 2px rgba(90, 90, 90, 0.534);
+    transform: translateX(-33px);
+    transition: 0.3s;
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+.container .button4 #close
+{
+    position: absolute;
+    font-size: 55px;
+    transform: translateX(25px);
+    color: rgb(221, 0, 0);
+    filter: drop-shadow(0 0 1px rgb(197, 0, 0));
+}
+
+.container .button4 #open
+{
+    position: absolute;
+    font-size: 55px;
+    transform: translateX(-25px);
+    color: rgb(13, 161, 0);
+    filter: drop-shadow(0 0 1px rgb(0, 228, 11));
+    visibility: collapse;
+}
+
+
+.container .button4 #check4:checked + #label4::before
+{
+    transform: translate(33px);
+}
+
+
+.container .button4 #check4:checked + #label4
+{
+    background-color: #63ff78;
+}
+
+.container .button4 #check4:checked ~ #close
+{
+    visibility: collapse;
+}
+
+.container .button4 #check4:checked ~ #open
+{
+    visibility: visible;
+}
+
+
+/* button5 */
+
+.container .button5
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+}
+
+.container .button5 #num5
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button5 #check5
+{
+    display: none;
+}
+
+
+.container .button5 #label5
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 95px;
+    height: 35px;
+    background-color: #5e5e5e;
+    box-shadow: 0 0 3px 1px rgb(66, 66, 66) inset;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+
+.container .button5 #label5::before
+{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #fffafa;
+    transform: translateX(-33px);
+    box-shadow: 0 0 5px 1px rgb(75, 75, 75);
+    transition: 0.3s;
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+.container .button5 #check5:checked + #label5
+{
+    background-color: #009eb3d5;
+}
+
+.container .button5 #check5:checked + #label5::before
+{
+    transform: translateX(33px);
+    background-color: #00ffff;
+}
+
+
+
+/* button6 */
+
+.container .button6
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button6 #num6
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button6 #check6
+{
+    display: none;
+}
+
+
+.container .button6 #label6
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    height: 60px;
+    background-color: rgb(8, 0, 53);
+    border-radius: 50px;
+    box-shadow: 3px 5px 5px 1px rgba(7, 0, 49, 0.397);
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.container .button6 #label6::before
+{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 12px -6px 1px 2px #fffafa inset;
+    transform: translateX(-30px);
+    transition: 0.4s;
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+
+.container .button6 #check6:checked + #label6
+{
+    background-color: #ffffff;
+}
+
+.container .button6 #check6:checked + #label6::before
+{
+    transform: translateX(30px);
+    box-shadow: 0px 0px 1px 50px #ffef10 inset;
+}
+
+/* button7 */
+
+.container .button7
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button7 #num7
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+.container .button7 #check7
+{
+    display: none;
+}
+
+.container .button7 #label7
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50px;
+    transition: 0.5s;
+    z-index: 10;
+    cursor: pointer;
+    
+}
+
+.container .button7 #heart
+{
+    position: absolute;
+    font-size: 80px;
+    color: rgb(116, 116, 116);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.container .button7 #check7:checked ~ #heart
+{
+    color: rgb(255, 49, 49);
+    filter: drop-shadow(0 0 2px rgb(190, 0, 0));
+}
+
+
+/* button8 */
+
+.container .button8
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button8 #num8
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button8 #check8
+{
+    display: none;
+}
+
+.container .button8 #label8
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50px;
+    transition: 0.5s;
+    z-index: 10;
+    cursor: pointer;
+    
+}
+
+.container .button8 #finger
+{
+    position: absolute;
+    font-size: 70px;
+    color: rgb(114, 114, 114);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.container .button8 #check8:checked ~ #finger
+{
+    color: #e1ff39;
+    filter: drop-shadow(0px 0px 3px rgb(244, 255, 96));
+}
+
+
+/* button9 */
+
+.container .button9
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button9 #num9
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button9 #check9
+{
+    display: none;
+}
+
+.container .button9 #label9
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 110px;
+    background-color: rgb(23, 19, 48);
+    border-radius: 50px;
+    transition: 0.4s;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.75) inset;
+    z-index: 10;
+    
+}
+
+.container .button9 #label9::before
+{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 1px 2px rgba(63, 63, 63, 0.658);
+    transform: translateY(-28px);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.container .button9 #lbon
+{
+    position: absolute;
+    color: #5bff45;
+    font-size: 40px;
+    font-weight: bold;
+    transform: translate(48px, -28px);
+    user-select: none;
+    transition: 0.4s;
+}
+
+.container .button9 #lboff
+{
+    position: absolute;
+    color: #888888cc;
+    font-size: 40px;
+    font-weight: bold;
+    transform: translate(60px, 28px);
+    user-select: none;
+    transition: 0.4s;
+}
+
+
+.container .button9 #check9:checked + #label9::before
+{
+    transform: translateY(28px);
+}
+
+.container .button9 #check9:checked ~ #lbon
+{
+    color: #888888cc;
+}
+
+.container .button9 #check9:checked ~ #lboff
+{
+    color: #ff3a3a;
+}
+
+
+/* button10 */
+
+.container .button10
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button10 #num10
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button10 #check10
+{
+    display: none;
+}
+
+.container .button10 #label10
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    transition: 0.5s;
+    z-index: 10;
+    cursor: pointer;
+    
+}
+
+.container .button10 #on
+{
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    transform: translateX(-35px);
+    background-image: linear-gradient(45deg, rgb(54, 242, 255), rgb(252, 159, 255));
+    filter: drop-shadow(0px 0px 15px #5cecff);
+    background-clip: text;
+    color: transparent;
+    transition: 0.4s;
+    cursor: pointer;
+
+}
+
+.container .button10 #off
+{
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    color: #5e5e5e;
+    transform: translateX(35px);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.container .button10 #check10:checked ~ #on
+{
+    background-image: linear-gradient(45deg, #5e5e5e, #5e5e5e);
+    filter: none;
+    background-clip: text;
+    color: transparent;
+}
+
+.container .button10 #check10:checked ~ #off
+{
+    background-image: linear-gradient(45deg, rgb(54, 242, 255), rgb(252, 159, 255));
+    filter: drop-shadow(0px 0px 15px #5cecff);
+    background-clip: text;
+    color: transparent;
+}
+
+/* button11 */
+
+.container .button11
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button11 #num11
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button11 #check11
+{
+    display: none;
+}
+
+.container .button11 #label11
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 180px;
+    height: 40px;
+    background-color: rgba(0, 5, 43, 0.377);
+    border: 2px solid rgba(255, 255, 255, 0.836);
+    border-radius: 50px;
+    transition: 0.3s linear;
+    z-index: 10;
+    
+}
+
+.container .button11 #label11::before
+{
+    content: "";
+    width: 80px;
+    height: 30px;
+    border-radius: 50px;
+    transform: translateX(-45px);
+    background-color: white;
+    transition: 0.4s;
+    padding-top: -10px;
+    padding-bottom: -10px;
+    cursor: pointer;
+
+}
+
+
+
+.container .button11 #div1,#div2
+{
+    position: absolute;
+    font-size: 20px;
+    color: rgba(190, 190, 190, 0.616);
+    z-index: 10;
+    user-select: none;
+    font-weight: bold;
+}
+
+.container .button11 #div1
+{
+    transform: translateX(-48px);
+    color: #1b0f3b;
+}
+
+.container .button11 #div2
+{
+    transform: translateX(48px);
+}
+
+.container .button11 #check11:checked + #label11::before
+{
+    transform: translateX(45px);
+    background-color: rgba(190, 190, 190, 0.274);
+
+}
+
+.container .button11 #check11:checked ~ #div2
+{
+    color: #1b0f3b;
+
+}
+
+.container .button11 #check11:checked ~ #div1
+{
+    color: rgba(190, 190, 190, 0.616);
+
+}
+
+.container .button11 #check11:checked ~ #label11
+{
+    border: 2px solid rgba(255, 255, 255, 0.219);
+
+}
+
+
+/* button12 */
+
+.container .button12
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button12 #num12
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+.container .button12 #check12
+{
+    display: none;
+}
+
+.container .button12 #label12
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 150px;
+    height: 60px;
+    background-color: #84A69D;
+    border-radius: 50px;
+    transition: 0.4s;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.178);
+    z-index: 10;
+    
+}
+
+.container .button12 #ona, #offa
+{
+    position: absolute;
+    user-select: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.container .button12 #ona
+{
+    color: #fffafa;
+    z-index: 10;
+    transform: translateX(-46px);   
+    transition: 0.5s;
+
+}
+
+.container .button12 #offa
+{
+    color: #fffafa;
+    z-index: 10;
+    transform: translateX(46px);  
+    display: none;
+    transition: 0.5s; 
+
+}
+
+
+
+.container .button12 #circle
+{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: translateX(-45px);
+    background-color: #0a8570;
+    transition: 0.5s;
+    padding-top: -10px;
+    padding-bottom: -10px;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+
+}
+
+.container .button12 #check12:checked ~ #circle
+{
+    transform: translateX(45px);
+    background-color: #8A1A1B;
+}
+
+.container .button12 #check12:checked ~ #label12
+{
+    transform: rotate(180deg);
+    background-color: #B09D9E;
+}
+
+.container .button12 #check12:checked ~ #ona
+{
+    display: none;
+}
+
+.container .button12 #check12:checked ~ #offa
+{
+    display: block;
+}
+
+/* button13 */
+
+.container .button13
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button13 #num13
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button13 #check13
+{
+    display: none;
+}
+
+.container .button13 #label13
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 120px;
+    height: 45px;
+    background-color: rgb(255, 95, 95);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.75) inset;
+    transition: 0.3s;
+    
+}
+
+.container .button13 #label13::before
+{
+    content: "";
+    width: 48px;
+    height: 48px;
+    transform: translateX(-36px);
+    background-color: #fafafa;
+    transition: 0.3s;
+    padding-top: -10px;
+    padding-bottom: -10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.75);
+    cursor: pointer;
+
+}
+
+.container .button13 #check13:checked ~ #label13::before
+{
+    transform: translateX(36px);
+}
+
+.container .button13 #check13:checked ~ #label13
+{
+    background-color: rgb(100, 255, 95);
+}
+
+/* button14 */
+
+.container .button14
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button14 #num14
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button14 #check14
+{
+    display: none;
+}
+
+.container .button14 #label14
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 140px;
+    height: 55px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.75) inset;
+    transition: 0.3s;
+    
+}
+
+
+.container .button14 #yesa
+{
+    width: 70px;
+    height: 55px;
+    background-color: rgb(33, 255, 33);
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fffafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-35px);
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75);
+    transition: 0.3s;
+}
+
+.container .button14 #noa
+{
+    width: 70px;
+    height: 55px;
+    background-color: rgba(27, 27, 27, 0.712);
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(27, 27, 27, 0.767);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(35px);
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75) inset;
+    transition: 0.3s;
+}
+
+.container .button14 #check14:checked ~ #yesa
+{
+    background-color: rgba(27, 27, 27, 0.712);
+    color: rgba(27, 27, 27, 0.767);
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75) inset;
+}
+
+.container .button14 #check14:checked ~ #noa
+{
+    background-color: rgb(255, 0, 64);
+    color: #fafafa;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75);
+}
+
+/* button15 */
+
+.container .button15
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button15 #num15
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button15 #check15
+{
+    display: none;
+}
+
+.container .button15 #label15
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 140px;
+    height: 55px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgba(255, 232, 232, 0.007);
+    transition: 0.3s;
+    overflow: hidden;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.75);
+}
+
+.container .button15 #label15::before
+{
+    content: "OFF";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size:30px;
+    width: 140px;
+    height: 55px;
+    font-weight: bold;
+    background-color: #ff3d3d;
+    color: #fffafa;
+    transition: 0.3s;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.75) inset;
+    cursor: pointer;
+
+}
+
+.container .button15 #label15::after
+{
+    content: "ON";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    width: 140px;
+    height: 55px;
+    transform: translateX(-150px);
+    background-color: #39ff5a;
+    color: #fffafa;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.75) inset;
+    cursor: pointer;
+
+}
+
+.container .button15 #check15:checked ~ #label15::after
+{
+    transform: translateX(0px);
+}
+.container .button15 #check15:checked ~ #label15::before
+{
+    transform: translateX(150px);
+}
+
+
+/* button16 */
+
+.container .button16
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button16 #num16
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button16 #check16
+{
+    display: none;
+}
+
+.container .button16 #label16
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 180px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: rgb(10, 0, 48);
+    transition: 0.3s;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.75) inset;
+
+}
+
+.container .button16 #sun
+{
+    position: absolute;
+    font-size: 30px;
+    color: rgb(255, 255, 52);
+    filter: drop-shadow(0 0 5px rgb(255, 255, 16));
+    transform: translate(-50px, -45px);
+    transition: 0.3s;
+}
+
+.container .button16 #moon
+{
+    position: absolute;
+    font-size: 30px;
+    color: #7e7e7eb9;
+    transform: translate(50px, -45px);
+    transition: 0.3s;
+}
+
+.container .button16 #label16::before
+{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 35px;
+    padding-top: -10px;
+    padding-bottom: -10px;
+    background-color: rgb(62, 44, 133);
+    border-radius: 50px;
+    transform: translateX(-50px);
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.75);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container .button16 #check16:checked ~ #label16::before
+{
+    transform: translateX(50px);
+}
+
+.container .button16 #check16:checked ~ #sun
+{
+    color: #7e7e7eb9;;
+    filter: none;
+}
+
+.container .button16 #check16:checked ~ #moon
+{
+    color: rgb(255, 255, 52);
+    filter: drop-shadow(0 0 5px rgb(255, 255, 16));
+}
+
+/* button17 */
+
+.container .button17
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button17 #num17
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button17 #check17
+{
+    display: none;
+}
+
+.container .button17 #label17
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 120px;
+    height: 55px;
+    border-radius: 6px;
+    background-color: #28ffbb;
+    transition: 0.3s;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75) inset;
+
+}
+
+
+.container .button17 #label17::before
+{
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: rgb(231, 231, 231);
+    transform: translateX(-30px);
+    padding-top: -10px;
+    padding-bottom: -10px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.container .button17 #check17:checked ~ #label17::before
+{
+    transform: translateX(30px);
+}
+
+.container .button17 #check17:checked ~ #label17
+{
+    background-color: #ff5f46;
+}
+
+
+/* button18 */
+
+.container .button18
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button18 #num18
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button18 #check18
+{
+    display: none;
+}
+
+.container .button18 #label18
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 130px;
+    height: 65px;
+    border-radius: 50px;
+    background-color: #000000c2;
+    transition: 0.3s;
+    z-index: -2;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75) inset;
+    border: 3px solid rgb(52, 255, 96);
+
+}
+
+.container .button18 #label18::before
+{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: translateX(-33px);
+    box-shadow: 0 0 0 22px #000000 inset;
+    border: 2px solid rgb(52, 255, 96);
+    transition: 0.3s;
+    cursor: pointer;
+    
+
+}
+
+.container .button18 #label18::after
+{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(52, 255, 96);
+    transform: translateX(-33px);
+    z-index: -1;
+    transition: 0.3s;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75) ;
+    
+}
+
+.container .button18 #check18:checked ~ #label18::before
+{
+    transform: translateX(33px);
+    border: 2px dashed rgb(255, 43, 43);
+}
+
+.container .button18 #check18:checked ~ #label18::after
+{
+    transform: translateX(33px);
+    background-color: rgb(255, 43, 43);
+}
+
+.container .button18 #check18:checked ~ #label18
+{
+    border: 3px dashed rgb(255, 43, 43);
+}
+
+/* button19 */
+
+.container .button19
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button19 #num19
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button19 #check19
+{
+    display: none;
+}
+
+.container .button19 #label19
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #42ff52;
+    transition: 0.4s;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75);
+
+}
+
+.container .button19 #label19::before
+{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fffafa;
+    transform: translateX(-20px);
+    transition: 0.4s;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75);
+    cursor: pointer;
+
+}
+
+.container .button19 #check19:checked ~ #label19::before
+{
+    transform: translateX(20px);
+}
+
+
+.container .button19 #check19:checked ~ #label19
+{
+    background-color: rgb(255, 10, 51);
+}
+
+/* button20 */
+
+.container .button20
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button20 #num20
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button20 #check20
+{
+    display: none;
+}
+
+.container .button20 #label20
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: #525252ab;
+    transition: 0.4s;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75) inset;
+
+
+}
+
+.container .button20 #label20::before
+{
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(17, 17, 17, 0.897);
+    border-radius: 50%;
+    transform: translateX(-30px);
+    transition: 0.3s;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.75);
+}
+
+.container .button20 #check20:checked ~ #label20::before
+{
+    transform: translateX(30px);
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+}
+
+
+/* button21 */
+
+.container .button21
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button21 #num21
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button21 #check21
+{
+    display: none;
+}
+
+.container .button21 #label21
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #00021a;
+    transition: 0.4s;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75) inset;
+
+
+}
+
+.container .button21 #label21::before
+{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 10;
+    
+}
+
+.container .button21 #sun2, #moon2
+{
+    position: absolute;
+}
+
+.container .button21 #sun2
+{
+    font-size: 35px;
+    transition: 0.5s;
+    color: transparent;
+}
+
+.container .button21 #moon2
+{
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.884);
+    filter: drop-shadow(0 0 3px white);
+    transition: 0.5s;
+}
+
+
+.container .button21 #check21:checked ~ #sun2
+{
+    color: #ffcb1e;
+    filter: drop-shadow(0 0 2px #ffcb1e);
+    transform: rotate(360deg);
+   
+}
+
+.container .button21 #check21:checked ~ #moon2
+{
+    color: transparent;
+    transform: rotate(-360deg);
+}
+
+.container .button21 #check21:checked ~ #label21
+{
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+/* button22 */
+
+.container .button22
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button22 #num22
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button22 #check22
+{
+    display: none;
+}
+
+.container .button22 #label22
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #808080;
+    transition: 0.4s;
+    transform: rotate(45deg) translate(-8px, 15px);
+}
+
+.container .button22 #label22a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #808080;
+    transition: 0.4s;
+    transform: rotate(-45deg) translate(8px, 15px);
+    z-index: -1;
+   
+}
+
+.container .button22 #label22::before
+{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255);
+    border-radius: 50%;
+    transform: translateX(-20px);
+    z-index: 100;
+    transition: 1s;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.75);
+    cursor: pointer;
+
+}
+
+.container .button22 #check22:checked ~ #label22::before
+{
+    animation: move1 0.4s forwards;
+    
+}
+
+.container .button22 #check22:not(:checked) ~ #label22::before
+{
+    animation: move2 0.4s forwards;
+}
+
+.container .button22 #check22:checked ~ #label22
+{
+    background-color: rgb(255, 103, 128);
+}
+
+.container .button22 #check22:checked ~ #label22a
+{
+    background-color: rgb(255, 103, 128);
+}
+
+
+
+
+@keyframes move1 {
+    0% {transform: translateX(-20px); opacity: 1;}
+    50% {transform: translateX(20px); opacity: 1;}
+    100% {transform: translate(22px,-43px); opacity: 1;}
+}
+
+@keyframes move2 {
+   0% {transform: translate(22px,-43px); opacity: 1;}
+   50% {transform: translateX(20px); opacity: 1;}
+   100% {transform: translateX(-20px); opacity: 1;}
+}
+
+/* button23 */
+
+.container .button23
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button23 #num23
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button23 #check23
+{
+    display: none;
+}
+
+.container .button23 #label23
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #376cb5a0;
+    transition: 0.4s;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.195);
+
+
+}
+
+
+.container .button23 #amtag, #pmtag
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    user-select: none;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.container .button23 #amtag
+{
+   color: rgb(0, 0, 131);
+   transform: translateX(-10px);
+}
+
+.container .button23 #pmtag
+{
+    color: rgba(135, 139, 255, 0.362);
+    transform: translateX(7px);
+}
+
+
+
+
+.container .button23 #label23::before
+{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    transform: translateX(-22px);
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0px 0px 3px 2px rgb(0,0,0,0.75);
+    z-index: 2;
+}
+
+.container .button23 #box23
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translateX(-22px);
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0px 0px 3px 2px rgb(0,0,0,0.75);
+    z-index: 0;
+}
+
+
+.container .button23 #check23:checked ~ #label23::before
+{
+    transform: translateX(20px);
+}
+
+.container .button23 #check23:checked ~ #box23
+{
+    transform: translateX(20px);
+}
+
+.container .button23 #check23:checked ~ #amtag
+{
+    color: rgba(135, 139, 255, 0.362);
+}
+
+.container .button23 #check23:checked ~ #pmtag
+{
+    color: rgb(0, 0, 131);
+}
+
+
+/* button24 */
+
+.container .button24
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button24 #num24
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button24 #check24
+{
+    display: none;
+}
+
+.container .button24 #label24
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #1c1c1e;
+    transition: 0.4s; 
+    box-shadow: 0 0 3px 2px rgb(0,0,0,0.72);
+    transform: translateX(-20px);
+
+}
+
+.container .button24 #Nlabel
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: rgba(19, 19, 19, 0.704);
+    font-size: 60px;
+    font-weight: bolder;
+    user-select: none;
+    transform: translateX(55px);
+    transition: 0.4s;
+    padding-left: 5px;
+}
+
+.container .button24 #label24::before
+{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.427);
+    border-radius: 50px;
+    transform: translateX(-20px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.container .button24 #check24:checked ~ #label24::before
+{
+    background-color: rgb(95, 255, 95);
+    filter: drop-shadow(0 0 2px rgb(95, 255, 95));
+    transform: translateX(20px);
+}
+
+.container .button24 #check24:checked ~ #label24
+{
+    box-shadow: 0 0 2px 5px rgb(95, 255, 95);
+}
+
+.container .button24 #check24:checked ~ #Nlabel
+{
+    color: rgb(95, 255, 95);
+    filter: drop-shadow(0 0 2px rgb(95, 255, 95));
+}
+
+/* button25 */
+
+.container .button25
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button25 #num25
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button25 #check25
+{
+    display: none;
+}
+
+.container .button25 #label25
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #1c1c1eac;
+    transition: 0.4s; 
+    box-shadow: 0 0 3px 2px rgb(0,0,0,0.72);
+
+}
+
+.container .button25 ion-icon[name="bulb-outline"]
+{
+    color: rgba(94, 94, 94, 0.324);
+    font-size: 35px;
+    transform: translateX(32px);
+    transition: 0.5s;
+}
+
+
+.container .button25 #label25::before
+{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #c7c7c78d;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.72);
+    transform: translateX(-30px);
+    transition: 0.3s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.container .button25 #check25:checked ~ #label25::before
+{
+    transform: translateX(30px);
+    background-color: #17151500;
+    box-shadow: 0 0 2px 2px rgba(255, 255, 0, 0.729);
+    
+}
+
+.container .button25 #check25:checked ~ ion-icon[name="bulb-outline"]
+{
+   color: #efd510;
+   filter: drop-shadow(0 0 1px rgb(255, 255, 67)) drop-shadow(0 0 2px rgb(255, 255, 67)) ;
+
+}
+
+.container .button25 #check25:checked ~ #label25
+{
+    box-shadow: 0 0 1px 2px rgb(255, 255, 37);
+
+}
+
+/* button26 */
+
+.container .button26
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button26 #num26
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button26 #check26
+{
+    display: none;
+}
+
+.container .button26 #label26
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #fffafa;
+    box-shadow: 0 0 3px 2px rgb(0,0,0,0.72);
+    cursor: pointer;
+
+
+}
+
+.container .button26 ion-icon[name="checkmark-sharp"]
+{
+    font-size: 60px;
+    color: rgb(64, 255, 64);
+    font-weight: bold;
+    transform: translateX(-20px);
+    position: absolute;
+    
+
+
+}
+
+.container .button26 ion-icon[name="close-sharp"]
+{
+    font-size: 60px;
+    color: rgb(255, 64, 64);
+    font-weight: bold;
+    transform:  translateX(20px);
+    position: absolute;
+    display: none;
+    
+
+
+}
+
+
+.container .button26 #check26:checked ~ ion-icon[name="close-sharp"]
+{
+    display: block;
+}
+
+.container .button26 #check26:checked ~ ion-icon[name="checkmark-sharp"]
+{
+   display: none;
+}
+
+/* button27 */
+
+.container .button27
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button27 #num27
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button27 #check27
+{
+    display: none;
+}
+
+.container .button27 #label27
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 130px;
+    height: 60px;
+    border-radius: 50px;
+    background-image: linear-gradient( to right,rgb(42, 41, 51),rgb(50, 50, 76) );
+    transition: 0.4s; 
+    box-shadow: 0 0 3px 2px rgb(0,0,0,0.72);
+
+}
+
+
+.container .button27 #label27::before
+{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #464c5e00;
+    border-radius: 50%;
+    transform: translate(-33px);
+    cursor: pointer;
+    transition: 0.4s;
+    z-index: 2;
+}
+
+.container .button27 #box27
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #464c5e;
+    border-radius: 50%;
+    transform: translate(-33px);
+    box-shadow: 0 0 5px rgba(0,0,0,0.75);
+    cursor: pointer;
+    transition: 0.4s;
+    z-index: 0;
+}
+
+.container .button27 ion-icon[name="flash"]
+{
+    font-size: 25px;
+    transform: translateX(-33px);
+    color: rgb(42, 41, 51);
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.container .button27 #check27:checked ~ #label27::before
+{
+    transform: translateX(33px);
+    
+}
+
+.container .button27 #check27:checked ~ #box27
+{
+    transform: translateX(33px);
+    background-color: white;
+    
+}
+
+.container .button27 #check27:checked ~ #label27
+{
+    background-image: linear-gradient( to right,rgb(29, 179, 99),rgb(52, 255, 126));
+}
+
+.container .button27 #check27:checked ~ ion-icon[name="flash"]
+{
+    transform: translateX(33px);
+    color: rgb(52, 255, 126);
+    filter: drop-shadow(0 0 1px rgb(110, 255, 163));
+}
+
+/* button28 */
+
+.container .button28
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button28 #num28
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button28 #check28
+{
+    display: none;
+}
+
+.container .button28 #label28
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 130px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #212121;
+    transition: 0.4s; 
+    box-shadow: 0 0 3px 2px rgb(0,0,0,0.72);
+
+}
+
+
+.container .button28 #label28::before
+{
+    content:"";
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #33333300;
+    transform: translateX(-33px);
+    cursor: pointer;
+    transition: 0.4s;
+    z-index: 2;
+}
+
+.container .button28 #shadowbefore
+{
+
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #333;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.72);
+    transform: translateX(-33px);
+    cursor: pointer;
+    transition: 0.4s;
+    position: absolute;
+    z-index: 0;
+}
+
+.container .button28 ion-icon[name="bulb-outline"]
+{
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.25);
+    transform: translateX(-33px);
+    transition: 0.4s;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.container .button28 #check28:checked ~ #label28::before
+{
+    transform: translateX(33px);
+}
+
+.container .button28 #check28:checked ~ ion-icon[name="bulb-outline"]
+{
+    transform: translateX(33px);
+    color: white;
+    filter:  drop-shadow(0 0 5px white) drop-shadow(0 0 10px white) drop-shadow(0 0 15px white);
+}
+
+.container .button28 #check28:checked ~ #shadowbefore
+{
+    transform: translateX(33px);
+}
+/* button29 */
+
+
+.container .button29
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button29 #num29
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button29 #check29
+{
+    display: none;
+}
+
+.container .button29 #label29
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 130px;
+    height: 60px;
+    border-radius: 50px;
+    background-image: linear-gradient( to right,  rgb(255, 61, 226) 1.1%, rgb(21, 0, 97) 99% );
+    box-shadow: 0 0 3px 2px rgb(0,0,0,0.72);
+    transition: 0.5s linear;
+
+
+}
+
+.container .button29 ion-icon[name="moon"],ion-icon[name="sunny"]
+{
+    font-size: 35px;
+    position: absolute;
+    font-weight: bold;
+}
+
+.container .button29 ion-icon[name="moon"]
+{
+
+    color: rgb(255, 255, 82);
+    transform: translateX(33px);
+    z-index: 1;
+    transition: 0.4s;
+    
+}
+
+.container .button29 ion-icon[name="sunny"]
+{
+    color: #ffffff;
+    transform: translateX(-33px);
+    z-index: 1;
+    transition: 0.4s;
+    display: none;
+}
+
+
+.container .button29 #label29::before
+{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-33px);
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.73);
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.4s ease;
+}
+
+.container .button29 #check29:checked ~ #label29
+{
+    background-image: linear-gradient( to right,  rgba(255,115,68,1) 11.2%, rgba(244,255,32,1) 100.6% );
+    transition: 0.5s linear;
+}
+
+.container .button29 #check29:checked ~ #label29::before
+{
+    transform: translateX(33px);
+}
+
+.container .button29 #check29:checked ~ ion-icon[name="sunny"]
+{
+    display: block;
+}
+
+.container .button29 #check29:checked ~ ion-icon[name="moon"]
+{
+    display: none;
+}
+
+/* button30 */
+
+.container .button30
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button30 #num30
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button30 #check30
+{
+    display: none;
+}
+
+.container .button30 #label30
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 130px;
+    height: 60px;
+    border-radius: 50px;
+    background: #fbbaad;
+    box-shadow: 0 0 3px 2px rgb(0,0,0,0.72);
+    transition: 0.5s;
+
+
+}
+
+.container .button30 #label30::before
+{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f07059;
+    transform: translateX(-33px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.container .button30 #check30:checked ~ #label30
+{
+    background-color: #c9e8d1;
+}
+
+.container .button30 #check30:checked ~ #label30::before
+{
+    background-color: #7cbf93;
+    transform: translateX(33px);
+}
+
+/* button31 */
+
+.container .button31
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button31 #num31
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button31 #check31
+{
+    display: none;
+}
+
+.container .button31 #label31
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 130px;
+    height: 60px;
+    border-radius: 50px;
+    background: #212121;
+    box-shadow: 0 0 3px 2px rgb(0,0,0,0.72);
+    transition: 0.2s;
+
+
+}
+
+.container .button31 #label31::before
+{
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    transform: translateX(-33px);
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.container .button31 #box31
+{
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    border-radius: 50%;
+    transform: translateX(-33px);
+    z-index: 0;
+    position: absolute;
+    transition: 0.1s;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.75);
+}
+
+.container .button31 ion-icon
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container .button31 ion-icon[name="lock-closed"]
+{
+    z-index: 1;
+    position: absolute;
+    transform: translateX(-33px);
+    transition: 0.1s;
+    color: rgba(255, 255, 255, 0.519);
+}
+
+.container .button31 ion-icon[name="lock-open"]
+{
+    z-index: 1;
+    position: absolute;
+    transform: translateX(33px);
+    display: none;
+    transition: 0.1s;
+}
+
+.container .button31 #check31:checked ~ #label31::before
+{
+    transform: translateX(33px);
+}
+
+.container .button31 #check31:checked ~ #label31
+{
+    background-color: #fffafa;
+}
+
+.container .button31 #check31:checked ~ #box31
+{
+    transform: translateX(33px);
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.75);
+    background-color: #fffafa;
+}
+
+.container .button31 #check31:checked ~ ion-icon[name="lock-closed"]
+{
+    transform: translateX(33px);
+    display: none;
+
+}
+
+.container .button31 #check31:checked ~ ion-icon[name="lock-open"]
+{
+    display: block;
+    color: #0b0624;
+}
+
+/* button32  */
+
+.container .button32
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button32 #num32
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button32 #check32
+{
+    display: none;
+}
+
+.container .button32 #label32
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 7px;
+    border-radius: 50px;
+    background: rgb(132, 132, 132);
+    transition: 0.2s;
+
+}
+
+.container .button32 #label32::before
+{
+   content: "";
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   background-color: rgb(132, 132, 132);
+   position: absolute;
+   transform: translate(-22px);
+   cursor: pointer;
+   transition: 0.4s;
+
+}
+
+.container .button32 #check32:checked ~ #label32::before
+{
+    transform: translate(22px);
+    background-color: rgb(127, 255, 127);
+}
+
+.container .button32 #check32:checked ~ #label32
+{
+    background-color: rgb(37, 218, 37);
+}
+
+
+/* button33 */
+
+.container .button33
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button33 #num33
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button33 #check33
+{
+    display: none;
+}
+
+.container .button33 #label33
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 130px;
+    height: 60px;
+    border-radius: 50px;
+    border: 3px solid #060607;
+    background: transparent;
+    transition: 0.4s;
+
+
+}
+
+.container .button33 #label33::before
+{
+    content: "";
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #060607;
+    transform: translate(-35px);
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.container .button33 #lb33b
+{
+    font-size: 20px;
+    color: #060607;
+    position: absolute;
+    font-weight: bold;
+    transform: translate(33px);
+    z-index: 0;
+}
+
+.container .button33 #lb33a
+{
+    font-size: 20px;
+    color: #060607;
+    position: absolute;
+    font-weight: bold;
+    transform: translate(-33px);
+    z-index: 0;
+}
+
+
+.container .button33 #check33:checked ~ #label33::before
+{
+    background-color: white;
+    transform: translateX(35px);
+    filter: drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
+}
+
+.container .button33 #check33:checked ~ #label33
+{
+    box-shadow: 0 0 2px 1px white;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.container .button33 #check33:checked ~ #lb33a
+{
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 5px white);
+}
+
+/* button34 */
+
+.container .button34
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button34 #num34
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button34 #check34
+{
+    display: none;
+}
+
+.container .button34 #label34
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 130px;
+    height: 60px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, rgb(13, 7, 36), rgb(0, 0, 0));
+    transition: 0.4s;
+
+
+}
+
+.container .button34 #label34::before
+{
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #FF6651, #F62682);
+    transform: translate(-35px);
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.container .button34 #check34:checked ~ #label34::before
+{
+    background: linear-gradient(135deg, #10ffc3, #33c2f2);
+    transform: translate(35px);
+}
+
+/* button35 */
+
+.container .button35
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.75);
+
+
+}
+
+.container .button35 #num35
+{
+    position: absolute;
+    font-size: 20px;
+    color: #ffffffb9;
+    transform: translate(-80px, -80px);
+    user-select: none;
+}
+
+
+.container .button35 #check35
+{
+    display: none;
+}
+
+.container .button35 #label35
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 180px;
+    height: 55px;
+    border-radius: 50px;
+    background-color: rgb(110, 197, 255);
+    transition: 0.4s;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.684);
+
+}
+
+
+.container .button35 #label35::before
+{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 47px;
+    border-radius: 50px;
+    background-color: rgb(255, 243, 243);
+    cursor: pointer;
+    transform: translateX(-33px);
+    transition: 0.3s;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.773);
+}
+
+.container .button35 #check35:checked ~ #label35::before
+{
+    transform: translateX(33px);
+}
+
+.container .button35 #check35:checked ~ #label35
+{
+    background-color: rgb(255, 70, 97);
+}
+
+/* button36 */

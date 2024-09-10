@@ -1,0 +1,116 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+
+html
+{
+    height: 100%;
+    width: 100%;
+}
+
+/* body */
+body
+{
+    background: linear-gradient(-135deg, rgb(60, 55, 106), rgb(23, 20, 69));
+}
+
+body::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: rgb(60, 55, 106);
+}
+
+body::-webkit-scrollbar-thumb
+{
+   background-image: linear-gradient( 45deg,#3494E6,#EC6EAD);
+   border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track
+{
+   background-color: rgb(60, 55, 106);
+   border-radius: 20px;
+}
+
+.navbar
+{
+
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #1E0342;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #6420AA;
+    box-shadow: 0 0 2px 2px rgb(230, 132, 255);
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.navbar a
+{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1;
+
+
+}
+
+.navbar .ani
+{
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    background-color: #bc64ff;
+    z-index: 0;
+    border-radius: 5px;
+    transform: translateY(-50px);
+    transition: all .3s ease 0s;
+}
+
+.navbar a:nth-child(1)
+{
+    width: 200px;
+}
+
+.navbar .start-switch,a:nth-child(2):hover ~ .ani
+{
+    width: 150px;
+    left: 200px;
+}
+
+
+.navbar a:nth-child(2)
+{
+    width: 150px;
+}
+
+.navbar .start-button,a:nth-child(1):hover ~ .ani
+{
+    width: 200px;
+    left: 0px;
+}
+.navbar a:nth-child(3)
+{
+    width: 135px;
+}
+
+.navbar .start-info,a:nth-child(3):hover ~ .ani
+{
+    width: 130px;
+    left: 366px;
+}
